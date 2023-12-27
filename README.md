@@ -1,0 +1,1 @@
+This project was posted in Kaggle(Playground Series - Season 3, Episode 20) and required to predict CO2 emission prediction in Rowanda. The dataset was provided by Sentinel-5P satellite observations and was already splitted into train and test files.
