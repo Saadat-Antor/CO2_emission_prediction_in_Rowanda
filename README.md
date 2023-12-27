@@ -71,5 +71,22 @@ Now, I will summarize all the steps and findings below:
 
    The satellite measurements are not effective due to significant noise and lack of relevance to the target variable. That was why I had omitted all the features except a few.
 
+   Moreover, to reduce the effect of Covid I created a `date` column and plotted emission by date. It looked promising:
+   ![image](https://github.com/Saadat-Antor/CO2_emission_prediction_in_Rowanda/assets/76962594/22a7aa3f-598d-4957-8e66-910b249b6f20)
 
+   I had also created some features that indicated cyclicity because of the plot below:
+   ![image](https://github.com/Saadat-Antor/CO2_emission_prediction_in_Rowanda/assets/76962594/cbd1ec46-8626-4ada-9a59-775e97580e80)
+
+   The plot above shows how the entries for one variable were taken. We can see a pattern i.e. cyclical that shows us that our data has cyclically measured data. Therefore, emmissions have a cyclic pattern - This will be helpful to our model. With more research and domain knowledge generate useful features that can improve your model performance.
+
+   In all the cases, but `year`, the features should be split into two parts: sinus and cosine, to reflect cyclicity, e.g. the 1st January is near the 31st December. Moreover, `cluster` features were also       created. These all would help improve the prediction score.
+
+**6. Preprocessing:**
+
+   In this section, I got all the reliable features and created a data frame that went through a pipeline that used `SimpleImputer()`, `QuantileTransformer()`, and `StandardScaler`.
+   ![image](https://github.com/Saadat-Antor/CO2_emission_prediction_in_Rowanda/assets/76962594/8a9aa64d-d1a2-4485-b383-0dbf1bc640c8)
+
+**7. Model Selection and Implementation:**
+
+   
 
