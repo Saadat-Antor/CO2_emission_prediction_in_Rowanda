@@ -88,5 +88,27 @@ Now, I will summarize all the steps and findings below:
 
 **7. Model Selection and Implementation:**
 
-   
+   Here we are using three ML models namely `Linear Regression`, `Random Forest`, and `Gradient Boosting`. I compared the performance of each model using a scoring method called "Mean Squared Error".
+   ![image](https://github.com/Saadat-Antor/CO2_emission_prediction_in_Rowanda/assets/76962594/aebbfc44-3908-40d5-9125-74eaa3a95127)
 
+   The `Random Forest` model used here scored better than the other two.
+
+**8. Hyperparameter Tuning:**
+
+   I had used some hyper parameters called `n_estimators`, and `max_depth` and tuned them with different values. But unfortunately, the scores were worse than before:
+   ![image](https://github.com/Saadat-Antor/CO2_emission_prediction_in_Rowanda/assets/76962594/a694ba14-51ac-4cf2-90bf-1760acc9e2e5)
+
+   Therefore, I decided not to use any hyper-parameters.
+   
+**9. Submission:**
+
+   All the pre-processing I had done before I had done with the "test" dataset and created a data frame:
+   ![image](https://github.com/Saadat-Antor/CO2_emission_prediction_in_Rowanda/assets/76962594/3c6f0d18-105a-4c3d-984b-6639fd01122b)
+
+   After that I had trained and fit the `RandomForestRegressor` model again and predicted with the new values. Finally, it was submission-ready. But unfortunately I can't submit the file because the last date of submission was four months ago. But I had fun doing all the data science stuffs and I hope I did pretty good at it.
+
+## Final Thoughts
+
+This project is actually based on a Supervised Machine Learning problem, Regression problem specifically, where I have to create a model predicting the emissions of CO2 emission. Anyone could have thought that `Linear Regression` model can be the best choice but the scores said something different.
+
+My take on this is that no model is perfect for these type of predictions. There could be any number of models good for this project, but eventually I have to chose one of them. Moreover, data pre-processing and analysis are the key here. Without these steps, my model would've done worse. Machine Learning or in broad term Data Science is actually based on two terms, **Handling Data** and **Building Best Model**. My plan for the future is to be better in these two fields.
