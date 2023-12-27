@@ -105,7 +105,7 @@ Now, I will summarize all the steps and findings below:
    All the pre-processing I had done before I had done with the "test" dataset and created a data frame:
    ![image](https://github.com/Saadat-Antor/CO2_emission_prediction_in_Rowanda/assets/76962594/3c6f0d18-105a-4c3d-984b-6639fd01122b)
 
-   After that I had trained and fit the `RandomForestRegressor` model again and predicted with the new values. Finally, it was submission-ready. But unfortunately I can't submit the file because the last date of submission was four months ago. But I had fun doing all the data science stuffs and I hope I did pretty good at it.
+   After that I had trained and fit the `RandomForestRegressor` model again and predicted with the new values. Finally, it was submission-ready. But unfortunately I can't submit the file because the last date of    submission was four months ago. But I had fun doing all the data science stuffs and I hope I did pretty good at it.
 
 ## Final Thoughts
 
