@@ -24,5 +24,12 @@ Now, I will summarize all the steps and findings below:
    There were null values but no duplicate entries. I filled those null values using pandas fillna() function with the strategy "mean". Now there are no missing values to the entire dataset.
    ![imputation_fillna](https://github.com/Saadat-Antor/CO2_emission_prediction_in_Rowanda/assets/76962594/af8f5ef7-9d4c-4fdb-a07f-c0b682647b81)
 
-   
+**3. Handling Outliers:**   
+
+   After plotting a box plot for the `emission` feature, which is the target variable, it seems we can see that there are outliers.
+   ![Screenshot_4](https://github.com/Saadat-Antor/CO2_emission_prediction_in_Rowanda/assets/76962594/c076ce87-6117-43db-afad-04da29daeb57)
+
+   After carefully looking at the values, these values were taken on the same location (-2.079, 29.321) and we can see a pattern for all three years. In each week coming, the values starts to increase and usually    crosses the 3000 threshold. Therefore, I believe that we should not consider these values to be outliers. Maybe that location has excessive amount of emission.
+
+   ![image](https://github.com/Saadat-Antor/CO2_emission_prediction_in_Rowanda/assets/76962594/ead7daec-2bae-4a4e-b2e0-2c5726a6e597)
 
