@@ -29,7 +29,37 @@ Now, I will summarize all the steps and findings below:
    After plotting a box plot for the `emission` feature, which is the target variable, it seems we can see that there are outliers.
    ![Screenshot_4](https://github.com/Saadat-Antor/CO2_emission_prediction_in_Rowanda/assets/76962594/c076ce87-6117-43db-afad-04da29daeb57)
 
-   After carefully looking at the values, these values were taken on the same location (-2.079, 29.321) and we can see a pattern for all three years. In each week coming, the values starts to increase and usually    crosses the 3000 threshold. Therefore, I believe that we should not consider these values to be outliers. Maybe that location has excessive amount of emission.
+   After carefully looking at the values, these values were taken on the same location (-2.079, 29.321) and we can see a pattern for all three years. In each week coming, the values starts to increase and usually    crosses the 3000 threshold. Therefore, I believe that we should not consider these values to be outliers. Maybe that location has excessive amount of emissions.
 
    ![image](https://github.com/Saadat-Antor/CO2_emission_prediction_in_Rowanda/assets/76962594/ead7daec-2bae-4a4e-b2e0-2c5726a6e597)
+
+**4. Thorough EDA (on low-level):**
+
+   Plotting a histogram with `emission` feature revealed that it was right-skewed, rather than normally distributed. One can think that using log function or other methods the problem could be solved. But as the competition would use RMSE mehod for scoring, the prediction score could be affected badly.
+   ![Screenshot_5](https://github.com/Saadat-Antor/CO2_emission_prediction_in_Rowanda/assets/76962594/e78f19c0-a3f1-453e-a7b0-6d2032fa2ad1)
+
+   The above plot used the mean emission per location and after grouping all the values by location an interesting thing caught my eye. There are several locations where the emission is always zero.
+   ![image](https://github.com/Saadat-Antor/CO2_emission_prediction_in_Rowanda/assets/76962594/f1376508-b82e-4ec8-af27-5b103eca4410)
+
+   Apparently, there are fifteen locations where the emission is zero. It is safe to assume that the values are so near zero that they are written as zeros. Additionally, in theory it is possible for a specific      location to have zero carbon emissions, especially if the activities in that location do not involve the combustion of fossil fuels or other processes that release carbon dioxide (CO2) into the atmosphere.
+
+   Now, to understand better I am going to plot the data in geological coordinates.
+   ![image](https://github.com/Saadat-Antor/CO2_emission_prediction_in_Rowanda/assets/76962594/81a2d12f-5c6a-4d46-b9e4-bcc6dc630be4)
+
+   The emissions are color-coded as `dark-blue = high emission`; `green = low emission`. We see that the emissions are clustered:
+
+      * Points in the west (Democratic Republic of the Congo) all have low emissions.
+      * The two red points with the highest emissions are both near Lac Kivu.
+
+   This is an interesting find. Let's investigate this further.
+   ![image](https://github.com/Saadat-Antor/CO2_emission_prediction_in_Rowanda/assets/76962594/e20b5a88-5002-41d4-a04d-dab11699767c)
+
+   Now, we know that the year 2020 affected everything, even the reading of CO2 emission. Let's find out with a plot:
+   ![image](https://github.com/Saadat-Antor/CO2_emission_prediction_in_Rowanda/assets/76962594/0d551dd3-7bad-45e3-8582-cdff9746f18c)
+
+   The figure above displays the CO2 emission by date. We can see that the second quarter of the year 2020 shows some weird pattern which is not similar with 2019 and 2021. Presumably this pattern occured due to     corona outbreak over the year 2020. We should deal with it later because it may introduce overfitting in our model.
+
+   
+
+
 
