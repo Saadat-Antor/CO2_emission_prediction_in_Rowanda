@@ -12,6 +12,7 @@ This project was posted in Kaggle(Playground Series - Season 3, Episode 20) and 
 Now, I will summarize all the steps and findings below:
 
 1. Exploring the dataset on the high-level:
+   
 The "train" dataset had a lot of missing values, especially in the "UvAerosolLayerHeight" group of columns(almost 99%). So it was imperative to remove all the entries.
 ![Missing Data_bar_chart](https://github.com/Saadat-Antor/CO2_emission_prediction_in_Rowanda/assets/76962594/eb864ce9-6380-47b8-b1be-b67d72c60398)
 
