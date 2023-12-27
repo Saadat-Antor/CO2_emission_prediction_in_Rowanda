@@ -59,7 +59,17 @@ Now, I will summarize all the steps and findings below:
 
    The figure above displays the CO2 emission by date. We can see that the second quarter of the year 2020 shows some weird pattern which is not similar with 2019 and 2021. Presumably this pattern occured due to     corona outbreak over the year 2020. We should deal with it later because it may introduce overfitting in our model.
 
-   
+   There were strong seasonal patterns could be seen:
+   ![image](https://github.com/Saadat-Antor/CO2_emission_prediction_in_Rowanda/assets/76962594/2174a201-892b-4b4d-b23f-9d9bf7a2e9df)
+
+   We can see that in year 2020 because of the epidemic there is sudden drop in emission (average per year). Moreover, from the perspective of weeks and months noticeable patterns can be seen. In the week number     14 to 16 the emission significantly increased. Same as for the week number 39 to 43. Additionally, the average emission throughout the year has minimal fluctuation except month no 5 and 10 or May and October.
+
+**5. Feature Engineering:**
+
+   To understand the relation between the target variable and non-target variables I plotted a heatmap with top 20 correlated variables:
+   ![image](https://github.com/Saadat-Antor/CO2_emission_prediction_in_Rowanda/assets/76962594/c33e939e-03e1-45ce-94e6-948950c7d933)
+
+   The satellite measurements are not effective due to significant noise and lack of relevance to the target variable. That was why I had omitted all the features except a few.
 
 
 
