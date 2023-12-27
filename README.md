@@ -8,3 +8,8 @@ This project was posted in Kaggle(Playground Series - Season 3, Episode 20) and 
 - Model Selection and implementation
 - Hyperparameter tuning
 - Submission
+
+Now, I will summarize all the steps and findings below:
+
+The train dataset had a lot of missing values, especially in the "UvAerosolLayerHeight" group of columns.
+![Missing Data_bar_chart](https://github.com/Saadat-Antor/CO2_emission_prediction_in_Rowanda/assets/76962594/eb864ce9-6380-47b8-b1be-b67d72c60398)
